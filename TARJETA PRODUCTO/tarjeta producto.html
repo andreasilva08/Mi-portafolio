@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GAFAS VR</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* hace que el borde y relleno NO agranden el tamaño del elemento */
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #080818;
+            min-height: 100vh;
+            text-align: center;
+            padding: 60px 20px;
+            font-family: "Trebuchet MS", "Century Gothic", sans-serif;
+        }
+
+        .tarjeta {
+            width: 270px;
+            background: linear-gradient(160deg, #141432 0%, #2a1050 45%, #141432 100%);
+            border-radius: 24px;
+            overflow: hidden;
+            margin: 0 auto;
+            box-shadow:
+                0 30px 60px rgba(0, 0, 0, 0.8),
+                /* sombra grande exterior */
+                0 0 0 1px rgba(255, 255, 255, 0.06),
+                /* borde blanco fantasma */
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            /* "inset" = sombra DENTRO del elemento, simula brillo interior arriba */
+        }
+
+        .imagen {
+            padding: 0 0 16px 0;
+            /* radial-gradient = degradado en forma de ELIPSE desde un punto central hacia afuera */
+            background: radial-gradient(ellipse 130% 90% at 55% 65%,
+                    rgba(210, 60, 255, 0.28) 0%,
+                    rgba(140, 40, 200, 0.12) 45%,
+                    transparent 75%);
+            overflow: hidden;
+        }
+
+        .precio {
+            float: right;
+            background: linear-gradient(135deg, #d4b9d8, #9333ea);
+            color: #fff;
+            font-family: "Century Gothic", "Futura", monospace;
+            font-weight: 900;
+            font-size: 13px;
+            padding: 8px 18px;
+            /* border-radius con 4 valores = top-left, top-right, bottom-right, bottom-left
+         solo redondea la esquina inferior izquierda */
+            border-radius: 0 0 0 18px;
+            /* letter-spacing = espacio entre cada letra */
+            letter-spacing: 1px;
+            box-shadow: -4px 4px 20px rgba(180, 60, 255, 0.6);
+        }
+
+        .gafas {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            filter:
+                drop-shadow(0 0 18px rgb(69, 42, 73)) drop-shadow(0 0 40px rgba(180, 40, 255, 0.7)) drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .info {
+            padding: 14px 16px 8px;
+            border-top: 1px solid rgba(180, 80, 255, 0.25);
+            overflow: hidden;
+        }
+
+        .col-izq {
+            float: left;
+            width: 44%;
+            text-align: left;
+        }
+
+        .nombre-pro {
+            font-family: "Century Gothic", "Futura", monospace;
+            font-size: 13px;
+            font-weight: 900;
+            color: #f0eaff;
+            text-transform: uppercase;
+            line-height: 1.3;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .prodct-descrp {
+            font-size: 8.5px;
+            color: rgba(210, 195, 235, 0.65);
+            line-height: 1.55;
+            margin-bottom: 10px;
+        }
+
+        .estrellas {
+            font-size: 14px;
+            color: #fbbf24;
+            letter-spacing: 2px;
+        }
+
+        .col-der {
+            float: right;
+            width: 53%;
+            text-align: left;
+        }
+
+        /* CARACTERÍSTICAS */
+        .fila-carct {
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        /* Esta clase se pone solo en la última fila para quitarle el borde de abajo */
+        .ultima-carct {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .titl-carct {
+            font-family: "Century Gothic", "Futura", monospace;
+            font-size: 7.5px;
+            font-weight: 700;
+            color: #c084fc;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 3px;
+        }
+
+        .text-carct {
+            font-size: 8px;
+            color: rgba(200, 185, 225, 0.6);
+            line-height: 1.45;
+        }
+
+        /* BOTÓN */
+        .btn {
+            clear: both;
+            padding: 14px 16px 18px;
+            text-align: center;
+        }
+
+        .btn-tarjt {
+            background: transparent;
+            color: #d8b4fe;
+            border: 1.5px solid rgba(168, 85, 247, 0.55);
+            border-radius: 50px;
+            padding: 10px 32px;
+            font-family: "Century Gothic", "Futura", monospace;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 0 18px rgba(168, 85, 247, 0.25);
+            /* transition = anima suavemente los cambios de esas propiedades al hacer hover
+         el número (0.3s) es cuánto dura la animación */
+            transition: box-shadow 0.3s, border-color 0.3s, color 0.3s;
+        }
+
+        .btn-efct:hover {
+            border-color: rgba(217, 70, 239, 0.9);
+            color: #fff;
+            box-shadow: 0 0 30px rgba(200, 60, 255, 0.55);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tarjeta">
+
+        <!-- IMAGEN + PRECIO -->
+        <div class="imagen">
+            <span class="precio">$349</span>
+            <div class="gafas">
+                <img class="gafas" src="img/gafas.png" alt="Gafas VR">
+            </div>
+        </div>
+
+        <!-- INFO: dos columnas con float -->
+        <div class="info">
+
+            <!-- Columna izquierda -->
+            <div class="col-izq">
+                <h2 class="nombre-pro">Nova<br>Vision X</h2>
+                <p class="prodct-descrp">Sumérgete en otra realidad con total libertad de movimiento.</p>
+                <div class="estrellas">★★★★☆</div>
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="col-der">
+                <div class="fila-carct">
+                    <div class="titl-carct">Resolución</div>
+                    <div class="text-carct">2160 x 2160 px por ojo, ultra nítida.</div>
+                </div>
+                <div class="fila-carct">
+                    <div class="titl-carct">Batería</div>
+                    <div class="text-carct">Hasta 3 horas de uso continuo.</div>
+                </div>
+                <!-- ultima-carct quita el borde inferior de la última fila -->
+                <div class="fila-carct ultima-carct">
+                    <div class="titl-carct">Peso</div>
+                    <div class="text-carct">295g, diseño ligero y ergonómico.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOTÓN (btn-efct activa el hover) -->
+        <div class="btn">
+            <button class="btn-tarjt btn-efct">Añadir al carrito</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
