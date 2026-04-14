@@ -2,196 +2,135 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Factura</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Andrea Silva</title>
+    <link rel="stylesheet" href="styless.css">
 </head>
 
 <body>
 
-  <div class="pagina">
-    <div class="factura">
+    
+    <!-- NAV FIJO ARRIBA -->
+    <nav>
+        <span class="nombre-nav"><b>Andrea</b> Silva</span>
+        <span class="enlaces-nav">
+            <a href="#inicio" class="activo">Inicio</a>
+            <a href="#quien">¿Quien soy?</a>
+            <a href="#proyectos">Proyectos</a>
+        </span>
+    </nav>
 
-      <!-- SECCIÓN 1: ENCABEZADO OSCURO -->
-      <div class="encabezado">
+    <!-- CONTENIDO QUE SCROLLEA -->
+    <main>
 
-        <div class="logo-empresa">
-          <div class="icono-logo">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="5" y="5" width="20" height="20" rx="2" stroke="white" stroke-width="1.5"
-                transform="rotate(45 15 15)" fill="none" />
-              <polygon points="15,8 18,14 15,17 12,14" fill="white" />
-            </svg>
-          </div>
-          <div class="texto-empresa">
-            <p class="nombre-empresa">WebSIDE</p>
-            <p class="slogan-empresa">Diseño + Innovación</p>
-          </div>
-        </div>
+        <!-- SECCIÓN 1: HERO -->
+        <section class="inicio" id="inicio">
+            <div class="imagen-inicio">
+                <img style="height: 400px; width: 600px;" src="img/1.avif" alt="Ilustración">
+            </div>
+            <div class="texto-inicio">
+                <h1>¿Quien soy?</h1>
+                <p>Soy desarrolladora web, me apasiona crear aplicaciones innovadoras y funcionales. 
+                    Trabajo con HTML, CSS, y JavaScript. 
+                    Me gusta resolver problemas y crear soluciones web robustas y escalables. 
+                    Estoy siempre al día con las últimas tendencias en desarrollo web.</p>
+                <a href="#quien" class="boton-rojo-arriba">Leer más</a>
+            </div>
+        </section>
 
-        <div class="titulo-factura">
-          <p class="palabra-factura">FACTURA</p>
-        </div>
+        <!-- SECCIÓN 2: QUIEN SOY -->
+        <section class="quien-soy" id="quien">
+            <img class="foto-perfil" src="img/2.jpg" alt="Tomas Mendez">
+            <p style="color: white; font-size: 30px;">
+               La programación es el proceso de diseñar, escribir, probar y mantener 
+               el código fuente de los programas de computadora, lo que nos permite crear soluciones innovadoras 
+               para problemas complejos, automatizar tareas y desarrollar tecnologías que mejoran la vida diaria. 
+               A través de la programación, podemos crear software, aplicaciones, sitios web y sistemas que nos rodean, 
+               desde los dispositivos móviles que llevamos en nuestros bolsillos hasta los sistemas de control 
+               de tráfico aéreo y los hospitales. La programación es una habilidad fundamental 
+                en el mundo digital actual, y su importancia solo seguirá creciendo a medida que 
+                la tecnología avance y se integre cada vez más en nuestra vida cotidiana. 
+            <p style="color: white; font-size: 40px;">- Andrea Silva</p>
+        </section>
 
-      </div>
+        <!-- SECCIÓN 3: PROYECTOS -->
+        <section class="proyectos" id="proyectos">
+            <h2>Mis proyectos</h2>
+            <div class="contenedor-tarjetas">
 
-      <!-- BARRA ROSA DECORATIVA -->
-      <div class="barra-rosa"></div>
+                <div class="tarjeta">
+                    <img src="img/6.jpeg" alt="Proyecto 1">
+                    <div class="cuerpo-tarjeta">
+                        <h3>Proyecto 1</h3>
+                        <p>En este proyecto se construye un paisaje de ciudad nocturna utilizando únicamente HTML y CSS. 
+                            El objetivo principal es aprender a crear figuras usando div, colores y propiedades de estilo. 
+                            Se trabaja con posicionamiento, tamaños y colores para formar edificios, ventanas y el cielo. 
+                            También se aplican conceptos como gradientes, sombras y capas visuales para dar profundidad al diseño. 
+                            Este ejercicio permite comprender cómo CSS puede usarse para crear ilustraciones simples sin imágenes externas. 
+                            Además, ayuda a desarrollar habilidades para organizar elementos dentro de una página web. 
+                            Es un proyecto para entender mejor el CSS.</p>
+                        <a href="#" class="boton-rojo">Ver proyecto</a>
+                    </div>
+                </div>
 
-      <!-- SECCIÓN 2: DATOS -->
-      <div class="seccion-datos">
+                <div class="tarjeta">
+                    <img src="img/5.jpeg" alt="Proyecto 2">
+                    <div class="cuerpo-tarjeta">
+                        <h3>Proyecto 2</h3>
+                        <p>Este proyecto consiste en diseñar marcadores de colores utilizando CSS. 
+                            Durante el ejercicio se aprende a usar gradientes, sombras y combinaciones de color 
+                            para dar un efecto más realista a los objetos. También se practican propiedades como background, 
+                            box-shadow y opacity. El objetivo es comprender cómo funcionan los modelos de color en CSS, 
+                            especialmente RGB y gradientes lineales. Además, se trabaja la organización de elementos 
+                            dentro de contenedores. Este proyecto ayuda a mejorar la creación de estilos visuales más atractivos. 
+                            Es una actividad clave para entender cómo CSS puede dar profundidad y realismo a los diseños.</p>
+                        <a href="#" class="boton-rojo">Ver proyecto</a>
+                    </div>
+                </div>
 
-        <div class="caja-cliente">
-          <p class="etiqueta-dato">Facturar a:</p>
-          <p class="nombre-cliente">Carlos Rodríguez</p>
-          <p class="direccion-cliente">Calle 45 # 12-34, Barrio Centro</p>
-          <p class="direccion-cliente">Bogotá, Colombia</p>
-          <p class="direccion-cliente">110111</p>
-        </div>
+                <div class="tarjeta">
+                    <img src="img/3.jpeg" alt="Proyecto 3">
+                    <div class="cuerpo-tarjeta">
+                        <h3>Proyecto 3</h3>
+                        <p>En este proyecto se construye un piano digital utilizando HTML y CSS. 
+                            El objetivo es aprender a organizar elementos de forma estructurada para representar 
+                            las teclas blancas y negras de un piano. Se utilizan propiedades como display, 
+                            position y border para colocar correctamente cada tecla. También se practica 
+                            el uso de diferentes tamaños y colores para diferenciar los tipos de teclas. 
+                            Este ejercicio ayuda a comprender cómo crear interfaces organizadas y simétricas. 
+                            Además, permite mejorar el control del espacio entre elementos. Es un proyecto útil 
+                            para practicar la disposición visual y el diseño de componentes.</p>
+                        <a href="#" class="boton-rojo">Ver proyecto</a>
+                    </div>
+                </div>
 
-        <div class="caja-vacia"></div>
+                <div class="tarjeta">
+                    <img src="img/4.jpeg" alt="Proyecto 4">
+                    <div class="cuerpo-tarjeta">
+                        <h3>Proyecto 4</h3>
+                        <p>Este proyecto consiste en crear la ilustración de un gato usando únicamente HTML y CSS. 
+                            El objetivo es aprender a construir figuras utilizando formas geométricas, bordes y colores. 
+                            Durante el desarrollo se usan propiedades como border-radius para formar las orejas, ojos y cara del gato. 
+                            También se trabaja con posicionamiento y superposición de elementos para lograr la forma completa del dibujo. 
+                            Este ejercicio demuestra cómo CSS puede utilizarse para crear arte digital simple. Además, ayuda a mejorar 
+                            la precisión en la colocación de elementos dentro de la página. Es un proyecto creativo que fortalece las habilidades. 
+                            </p>
+                        <a href="#" class="boton-rojo">Ver proyecto</a>
+                    </div>
+                </div>
 
-        <div class="caja-numero">
-          <div class="fila-numero">
-            <p class="etiqueta-numero">Factura #</p>
-            <p class="valor-numero">52148</p>
-          </div>
-          <div class="fila-numero">
-            <p class="etiqueta-numero">Fecha:</p>
-            <p class="valor-numero">01 / 02 / 2025</p>
-          </div>
-        </div>
+            </div>
+        </section>
 
-      </div>
+        <!-- PIE DE PÁGINA -->
+        <footer>
+           <b><p class="footer">© 2026 Andrea Silva — Todos los derechos reservados</p> </b>
+        </footer>
 
-      <!--SECCIÓN 3: TABLA DE PRODUCTOS-->
-      <div class="color"></div>
-
-
-      <table class="tabla-productos">
-        <thead>
-          <tr class="fila-encabezado-tabla">
-            <th class="col"></th>
-            <th class="col-numero">No.</th>
-            <th class="col-descripcion">Descripción del Producto</th>
-            <th class="col-precio">Precio</th>
-            <th class="col-cantidad">Cant.</th>
-            <th class="col-total">Total</th>
-            <th class="col"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr class="fila-producto">
-            <td class="col1"></td>
-            <td class="celda-numero">1</td>
-            <td class="celda-descripcion">Desarrollo de sitio web</td>
-            <td class="celda-precio">$50.000</td>
-            <td class="celda-cantidad">1</td>
-            <td class="celda-total">$50.000</td>
-            <td class="col1"></td>
-          </tr>
-
-          <tr class="fila-producto">
-            <td class="col1"></td>
-            <td class="celda-numero">2</td>
-            <td class="celda-descripcion">Diseño de logotipo corporativo</td>
-            <td class="celda-precio">$20.000</td>
-            <td class="celda-cantidad">3</td>
-            <td class="celda-total">$60.000</td>
-            <td class="col1"></td>
-          </tr>
-
-          <tr class="fila-producto">
-            <td class="col1"></td>
-            <td class="celda-numero">3</td>
-            <td class="celda-descripcion">Mantenimiento mensual del servidor</td>
-            <td class="celda-precio">$10.000</td>
-            <td class="celda-cantidad">2</td>
-            <td class="celda-total">$20.000</td>
-            <td class="col1"></td>
-          </tr>
-
-          <tr class="fila-producto">
-            <td class="col1"></td>
-            <td class="celda-numero">4</td>
-            <td class="celda-descripcion">Consultoría en marketing digital</td>
-            <td class="celda-precio">$90.000</td>
-            <td class="celda-cantidad">1</td>
-            <td class="celda-total">$90.000</td>
-            <td class="col1"></td>
-          </tr>
-
-          <!-- FILA VACÍA CON MISMO ESPACIO -->
-          <tr class="fila-vacia">
-            <td class="col1"></td>
-            <td class="celda-numero"></td>
-            <td class="celda-descripcion"></td>
-            <td class="celda-precio"></td>
-            <td class="celda-cantidad"></td>
-            <td class="celda-total">
-            <td class="col1"></td>
-
-
-            </td>
-          </tr>
-        </tbody>
-
-      </table>
-
-      <!--SECCIÓN 4: PIE - PAGO Y TOTALES-->
-      <div class="seccion-pie">
-
-        <div class="caja-pago">
-          <p class="gracias-texto">Gracias por su preferencia</p>
-          <p class="titulo-pago">Información de Pago:</p>
-          <p class="dato-pago">Cuenta #: &nbsp;&nbsp; 1234 5678 9012</p>
-          <p class="dato-pago">Titular: &nbsp;&nbsp;&nbsp;&nbsp; Carlos Rodríguez</p>
-          <p class="dato-pago">Banco: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Agrega tus datos</p>
-        </div>
-
-        <div class="caja-totales">
-          <div class="fila-subtotal">
-            <p class="etiqueta-total">Subtotal:</p>
-            <p class="valor-total">$220.000</p>
-          </div>
-          <div class="fila-subtotal">
-            <p class="etiqueta-total">Impuesto:</p>
-            <p class="valor-total">0.00%</p>
-          </div>
-          <div class="fila-gran-total">
-            <p class="etiqueta-gran-total">Total:</p>
-            <p class="valor-gran-total">$220.000</p>
-          </div>
-        </div>
-
-      </div>
-      <!-- SECCIÓN 5: TÉRMINOS Y FIRMA -->
-      <div class="seccion-terminos">
-        <div class="caja-terminos">
-          <div class="linea-terminos"></div>
-          <div class="titulo-terminos">Términos y Condiciones</div>
-          <p class="texto-terminos">
-            El pago debe realizarse dentro de los 30 días siguientes a la fecha de emisión.
-            Se cobrará un recargo del 2% mensual por mora. Cualquier disputa debe
-            notificarse dentro de los 15 días hábiles. El incumplimiento generará
-            cobros adicionales según la ley vigente.
-          </p>
-        </div>
-
-        <div class="caja-firma">
-          <div class="linea-firma"></div>
-          <p class="texto-firma">Firma Autorizada</p>
-        </div>
-
-      </div>
-      <!-- BARRA OSCURA DECORATIVA -->
-      <div class="barra-oscura"></div>
-    </div>
-  </div>
+    </main>
 
 
 </body>
+
 
 </html>
