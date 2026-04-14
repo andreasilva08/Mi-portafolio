@@ -14,7 +14,7 @@ html, body {
 /*NAV*/
 nav {
   background: #2c2c2c; /* color de fondo oscuro */
-  padding: 10px 40px 10px; /* espacio interno arriba/abajo y lados */
+  padding: 10px 55px 10px; /* espacio interno arriba/abajo y lados */
   overflow: hidden; /* contiene los elementos flotantes internos */
 }
 
@@ -34,12 +34,13 @@ nav {
   float: right; /* empuja los enlaces al extremo derecho */
   line-height: 1.6; /* altura de línea para alinear con el nombre */
  margin-top: 5px; /* empuja los enlaces hacia abajo para abajo*/
+ padding: 0 38px; /* reduce el contenido de los enlaces*/
 }
 
 .enlaces-nav a {
   color: #cccccc; /* color gris claro para los enlaces */
   text-decoration: none; /* quita el subrayado de los enlaces */
-  margin-left: 20px; /* separación entre cada enlace */
+  margin-left: 10px; /* separación entre cada enlace */
   font-size: 20px; /* tamaño de fuente de los enlaces */
   letter-spacing: 0.5px; /* espacio entre letras */
   transition: color 0.2s; /* animación suave al cambiar de color */
@@ -62,21 +63,22 @@ main {
 /*SECCIÓN 1 — INICIO*/
 .inicio {
   background: #ffffff; /* fondo blanco */
-  padding: 60px 60px 20px 10px; /* espacio interno generoso */
+  padding: 30px 60px 40px 10px; /* espacio interno generoso */
   overflow: hidden; /* contiene los floats internos */
-  min-height: 420px; /* altura mínima para que no quede muy pequeña */
+  min-height: 430px; /* altura mínima para que no quede muy pequeña */
 }
 
 .imagen-inicio {
   float: left; /* la imagen flota a la izquierda */
-  width: 45%; /* ocupa el 45% del ancho */
-  text-align: center; /* centra la imagen dentro del contenedor */
+  width: 50%; /* ocupa el 45% del ancho */
+  text-align: right; /* mueve a la derecha la imagen dentro del contenedor */
   padding-top: 10px; /* baja un poco la imagen */
+  padding-right: 50px; /* separa la imagen un poco de la derecha */
 }
 
 .imagen-inicio img {
   width: 100%; /* la imagen ocupa todo el ancho de su contenedor */
-  max-width: 400px; /* pero no más de 380px */
+  max-width: 400px; /* pero no más de 500px */
 }
 
 .texto-inicio {
@@ -92,14 +94,16 @@ main {
   margin-bottom: 20px; /* espacio debajo del título */
   line-height: 1.1; /* altura de línea compacta */
   margin-left: -120px; /* mover texto hacia la izquiera */
-}
+  padding: 10px 100px;  /* contenedor del texto */
+} 
 
 .texto-inicio p {
   font-size: 30px; /* tamaño del párrafo */
   color: #555; /* gris oscuro para el texto */
   line-height: 1.7; /* altura de línea para legibilidad */
   margin-bottom: 30px; /* espacio antes del botón */
-  margin-left: -120px; /* mover texto hacia la izquiera */
+  margin-left: -100px; /* mover texto hacia la izquiera */
+  padding: 10px 100px;  /* contenedor del texto */
 }
 
 .boton-rojo-arriba {
@@ -113,7 +117,8 @@ main {
   cursor: pointer; /* cursor de manita al pasar el mouse */
   text-decoration: none; /* quita subrayado si es un enlace */
   transition: background 0.2s; /* animación suave al hacer hover */
-  margin-left: -120px; /* mover texto hacia la izquiera */
+  margin-left: 0px; /* mover texto hacia la izquiera */
+  
 }
 
 .boton-rojo {
@@ -136,7 +141,7 @@ main {
 /* SECCIÓN 2 — QUIEN SOY */
 .quien-soy {
   background: #e74c3c; /* fondo rojo */
-  padding: 60px 80px; /* espacio interno */
+  padding: 40px 55px; /* espacio interno */
   text-align: center; /* centra todo el contenido */
 }
 
@@ -204,7 +209,8 @@ main {
 }
 
 .cuerpo-tarjeta {
-  padding: 20px 16px; /* espacio interno del texto de la tarjeta */
+  margin: 3px 10px;
+  padding: 35px 35px; /* espacio interno del texto de la tarjeta */
 }
 
 .cuerpo-tarjeta h3 {
@@ -218,7 +224,7 @@ main {
   font-size: 20px; /* texto pequeño de descripción */
   color: #777; /* gris medio */
   line-height: 1.6; /* espaciado entre líneas */
-  margin-bottom: 20px; /* espacio antes del botón */
+  margin-bottom: 25px; /* espacio antes del botón */
 }
 
 /*PIE DE PÁGINA*/
@@ -233,5 +239,6 @@ footer {
 }
 
 .footer {
-  margin-left: 1400px; /*texto hacia la derecha */
+  text-align: right;   /* mueve el texto a la derecha */
+  padding-right: 30px; /* mueve mucho más el texto a la derecha */
 }
