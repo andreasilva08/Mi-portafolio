@@ -63,7 +63,7 @@ main {
 /*SECCIÓN 1 — INICIO*/
 .inicio {
   background: #ffffff; /* fondo blanco */
-  padding: 30px 60px 40px 10px; /* espacio interno generoso */
+  padding: 10px 60px 40px 10px; /* espacio interno generoso */
   overflow: hidden; /* contiene los floats internos */
   min-height: 430px; /* altura mínima para que no quede muy pequeña */
 }
@@ -72,7 +72,7 @@ main {
   float: left; /* la imagen flota a la izquierda */
   width: 50%; /* ocupa el 45% del ancho */
   text-align: right; /* mueve a la derecha la imagen dentro del contenedor */
-  padding-top: 10px; /* baja un poco la imagen */
+  padding-top: 70px; /* baja un poco la imagen */
   padding-right: 50px; /* separa la imagen un poco de la derecha */
 }
 
@@ -84,7 +84,7 @@ main {
 .texto-inicio {
   float: right; /* el texto flota a la derecha */
   width: 50%; /* ocupa el 50% del ancho */
-  padding-top: 40px; /* baja el texto para centrarlo visualmente */
+  padding-top: 30px; /* baja el texto para centrarlo visualmente */
 }
 
 .texto-inicio h1 {
