@@ -1,0 +1,673 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PÁGINA Y FONDO */
+body {
+  background-color: #d6d6d6;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENEDOR PRINCIPAL DE LA FACTURA */
+.factura {
+  background-color: #ffffff;
+  width: 550px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* SECCIÓN 1: ENCABEZADO OSCURO */
+.encabezado {
+  background-color: #2b2b3a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 30px 20px 30px;
+}
+
+/* Logo + nombre empresa */
+.logo-empresa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icono-logo {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto-empresa {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nombre-empresa {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.slogan-empresa {
+  color: #aaaaaa;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+/* Título FACTURA a la derecha */
+.titulo-factura {
+  display: flex;
+  align-items: center;
+}
+
+.palabra-factura {
+  color: #e8537a;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+/* BARRA ROSA DECORATIVA */
+.barra-rosa {
+  height: 4px;
+  background-color: #e8537a;
+  width: 100%;
+}
+
+/* SECCIÓN 2: DATOS - 3 CAJAS (GRID) */
+.seccion-datos {
+  background-color: #2b2b3a;
+  display: grid;
+  grid-template-columns: 33% 30% 37%;
+  padding: 10px 30px 10px 35px;
+}
+
+/* Caja izquierda: datos del cliente */
+.caja-cliente {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.etiqueta-dato {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.nombre-cliente {
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.direccion-cliente {
+  font-size: 10px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* Caja del centro: vacía para separar */
+.caja-vacia {
+  padding: 0;
+  /* solo ocupa el espacio en el grid */
+}
+
+/* Caja derecha: número y fecha */
+.caja-numero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.fila-numero {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.etiqueta-numero {
+  font-size: 11px;
+  font-weight: bold;
+  color: #ffffff;
+  min-width: 65px;
+}
+
+.valor-numero {
+  padding-left: 3vh;
+  font-size: 11px;
+  color: #ffffff;
+}
+
+.valor-numero1 {
+  padding-left: 3vh;
+  font-size: 11px;
+  color: #ffffff;
+}
+/*SECCIÓN 3: TABLA DE PRODUCTOS*/
+
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Encabezado de la tabla */
+.fila-encabezado-tabla {
+  background-color: #eeeeee;
+}
+
+.col {
+  padding: 0px 5px;
+}
+.col1 {
+  border-bottom: 1px solid white;
+  padding: 0px 12px;
+}
+
+.col-numero {
+  text-align: left;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: bold;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 50px;
+}
+
+.col-descripcion {
+  padding: 20px 10px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: bold;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.col-precio {
+  padding: 20px 10px;
+  text-align: right;
+  font-size: 11px;
+  font-weight: bold;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 80px;
+}
+
+.col-cantidad {
+  padding: 20px 10px;
+  text-align: right;
+  font-size: 11px;
+  font-weight: bold;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 50px;
+}
+
+.col-total {
+  padding: 20px 30px 20px 10px;
+  text-align: right;
+  font-size: 11px;
+  font-weight: bold;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 80px;
+}
+
+/* Filas de productos */
+.fila-producto {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.celda-numero {
+  padding: 14px 10px 14px 20px;
+  font-size: 12px;
+  color: #888888;
+  text-align: left;
+}
+
+.celda-descripcion {
+  padding: 14px 10px;
+  font-size: 12px;
+  color: #444444;
+  text-align: left;
+}
+
+.celda-precio {
+  padding: 14px 10px;
+  font-size: 12px;
+  color: #444444;
+  text-align: right;
+}
+
+.celda-cantidad {
+  padding: 14px 10px;
+  font-size: 12px;
+  color: #444444;
+  text-align: center;
+}
+
+.celda-total {
+  padding: 14px 30px 14px 10px;
+  font-size: 12px;
+  color: #444444;
+  text-align: right;
+}
+
+/* Fila vacía al final de la tabla */
+.fila-vacia {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.fila-vacia .celda-numero,
+.fila-vacia .celda-descripcion,
+.fila-vacia .celda-precio,
+.fila-vacia .celda-cantidad,
+.fila-vacia .celda-total {
+  padding: 14px 10px;
+  height: 46px;
+}
+
+/* SECCIÓN 4: PIE - PAGO Y TOTALES (GRID) */
+.seccion-pie {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px 30px;
+  gap: 7vh;
+  margin-top: 5px;
+}
+
+/* Caja izquierda: información de pago */
+.gracias-texto {
+  font-weight: 900;
+  font-size: 11px;
+  color: #444444;
+  margin-bottom: 8px;
+}
+
+.titulo-pago {
+  font-size: 11px;
+  font-weight: 900;
+  color: #333333;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.datos{ 
+display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.dato-pago {
+  font-size: 10px;
+  color: #666666;
+  line-height: 1.8;
+}
+
+.dato-pago1 {
+  font-size: 10px;
+  color: #666666;
+  line-height: 1.8;
+}
+/* Caja derecha: subtotal, impuesto, total */
+.caja-totales {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fila-subtotal {
+  display: flex;
+  gap: 9vh;
+  align-items: center;
+}
+
+.etiqueta-total {
+  padding-left: 6vh;
+  font-size: 11px;
+  font-weight: 900;
+  color: #555555;
+}
+
+.valor-total {
+  font-size: 11px;
+  font-weight: 900;
+  color: #444444;
+}
+
+.valor-total1 {
+  font-size: 11px;
+  font-weight: 900;
+  color: #444444;
+}
+
+.linea-total {
+  padding: 1px 70px;
+  margin-top: 1vh;
+  margin-left: 5vh;
+  float: left;
+  background-color: black;
+}
+
+.fila-gran-total {
+  display: flex;
+  align-items: center;
+}
+
+.etiqueta-gran-total {
+  padding-left: 6vh;
+  font-size: 13px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.valor-gran-total {
+  padding-left: 11vh;
+  float: right;
+  font-size: 13px;
+  font-weight: bold;
+  color: #222222;
+}
+
+/* SECCIÓN 5: TÉRMINOS Y FIRMA (GRID) */
+.seccion-terminos {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 5px 30px 30px;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+/* Caja de términos */
+
+.caja-terminos {
+  width: 27vh;
+}
+
+.linea-terminos {
+  padding: 1px 60px;
+  margin-right: 6px;
+  float: left;
+  background-color: black;
+}
+
+.titulo-terminos {
+  font-size: 11px;
+  font-weight: bold;
+  color: #333333;
+  margin: 8px 0px 2px;
+}
+
+.texto-terminos {
+  font-size: 9px;
+  color: #999999;
+  line-height: 1.6;
+}
+
+/* Caja de firma */
+.caja-firma {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+align-content: stretch;
+  gap: 6px;
+  margin-right: 2.5vh;
+}
+
+.linea-firma {
+  width: 15vh;
+  border-top: 1px solid #333333;
+}
+
+.texto-firma {
+  font-weight: 900;
+  margin-right: 2vh;
+  font-size: 11px;
+  color: #555555;
+}
+
+/* BARRA OSCURA DECORATIVA */
+.barra-oscura {
+  height: 15px;
+  background-color: #2b2b3a;
+  width: 100%;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .factura {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .encabezado {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .seccion-datos {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .caja-numero {
+    align-items: center;
+  }
+
+  .seccion-pie {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .caja-totales {
+    align-items: center;
+    padding-right: 5vh;
+  }
+
+  .fila-subtotal {
+    justify-content: center;
+  }
+
+.linea-total {
+  width: 23vh;
+}
+
+.seccion-terminos{
+  display: grid;
+  gap:30px;
+}
+
+  .texto-firma {
+  margin: 0 1vh;
+}
+
+  .tabla-wrapper {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .factura {
+    width: 100%;
+  }
+
+  .encabezado {
+    padding: 20px 10px;
+  }
+
+  .palabra-factura {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .nombre-empresa {
+    font-size: 13px;
+  }
+
+  .slogan-empresa {
+    font-size: 7px;
+  }
+
+  .seccion-datos {
+    padding: 10px;
+  }
+
+  .etiqueta-dato {
+    font-size: 13px;
+  }
+
+  .nombre-cliente,
+  .direccion-cliente {
+    font-size: 9px;
+  }
+
+  .col-numero,
+  .col-descripcion,
+  .col-precio,
+  .col-cantidad,
+  .col-total {
+    font-size: 10px;
+    padding: 10px 5px;
+  }
+
+  .celda-numero,
+  .celda-descripcion,
+  .celda-precio,
+  .celda-cantidad,
+  .celda-total {
+    font-size: 10px;
+  }
+
+  .seccion-pie {
+    padding: 15px;
+  }
+
+.caja-totales{
+  padding-right: 5vh;
+}
+
+  .etiqueta-gran-total,
+  .valor-gran-total {
+    font-size: 12px;
+  }
+
+   .texto-firma {
+  margin: 0 1vh;
+}
+}
+
+
+@media (max-width: 300px) {
+
+  body {
+    padding: 5px;
+  }
+
+  .factura {
+    width: 100%;
+  }
+
+  .encabezado {
+    padding: 15px 8px;
+  }
+
+  .palabra-factura {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .nombre-empresa {
+    font-size: 11px;
+  }
+
+  .slogan-empresa {
+    font-size: 6px;
+  }
+
+  .seccion-datos {
+    padding: 8px;
+  }
+
+  .etiqueta-dato {
+    font-size: 11px;
+  }
+
+  .nombre-cliente,
+  .direccion-cliente {
+    font-size: 8px;
+  }
+
+  .col-numero,
+  .col-descripcion,
+  .col-precio,
+  .col-cantidad,
+  .col-total {
+    font-size: 9px;
+    padding: 8px 4px;
+  }
+
+  .celda-numero,
+  .celda-descripcion,
+  .celda-precio,
+  .celda-cantidad,
+  .celda-total {
+    font-size: 9px;
+    padding: 10px 4px;
+  }
+
+  .seccion-pie {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .caja-totales{
+  padding-right: 5vh;
+}
+
+  .etiqueta-gran-total,
+  .valor-gran-total {
+    font-size: 11px;
+  }
+
+  .texto-terminos {
+    font-size: 8px;
+  }
+
+  .texto-firma {
+    font-size: 10px;
+  }
+}

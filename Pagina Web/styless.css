@@ -1,0 +1,354 @@
+/* RESET Y BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* NAVEGACIÓN — FLEXBOX */
+nav {
+  background: #2c2c2c;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 60px;
+}
+
+.nombre-nav {
+  color: white;
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 300;
+  padding: 10px 0;
+}
+
+.nombre-nav strong {
+  font-weight: 700;
+}
+
+.enlaces-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  padding: 10px 0;
+}
+
+.enlaces-nav a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: clamp(15px, 2vw, 20px);
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.enlaces-nav a:hover,
+.enlaces-nav a.activo {
+  color: white;
+  font-weight: 600;
+}
+
+/* MAIN — contenedor general */
+main {
+  width: 100%;
+}
+
+/*bSECCIÓN 1 — INICIO (HERO) — FLEXBOX */
+.inicio {
+  background: #ffffff;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  min-height: 420px;
+}
+
+.imagen-inicio {
+  flex: 1 1 300px;
+  max-width: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-inicio img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.texto-inicio {
+  flex: 1 1 280px;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.texto-inicio h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  color: #e74c3c;
+  line-height: 1.1;
+}
+
+.texto-inicio p {
+  font-size: clamp(16px, 2.2vw, 22px);
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Botones */
+.boton-rojo-arriba,
+.boton-rojo {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.boton-rojo-arriba {
+  align-self: flex-start;
+}
+
+.boton-rojo:hover,
+.boton-rojo-arriba:hover {
+  background: #c0392b;
+}
+
+/* SECCIÓN 2 — QUIEN SOY — FLEXBOX */
+.quien-soy {
+  background: #e74c3c;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.foto-perfil {
+  width: clamp(120px, 20vw, 200px);
+  height: clamp(120px, 20vw, 200px);
+  border-radius: 50%;
+  border: 6px solid white;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.quien-soy p {
+  font-size: clamp(16px, 2.2vw, 26px);
+  color: white;
+  line-height: 1.75;
+  max-width: 180vh;
+}
+
+.quien-soy .firma {
+  font-size: clamp(18px, 3vw, 36px);
+  font-weight: 600;
+}
+
+/* SECCIÓN 3 — PROYECTOS — CSS GRID */
+.proyectos {
+  background: #f2f2f2;
+  padding: 60px 40px;
+}
+
+.proyectos h2 {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.cuerpo-tarjeta {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.cuerpo-tarjeta h3 {
+  font-size: clamp(17px, 2vw, 20px);
+  font-weight: 600;
+  color: #333;
+}
+
+.cuerpo-tarjeta p {
+  font-size: clamp(14px, 1.6vw, 17px);
+  color: #777;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.cuerpo-tarjeta .boton-rojo {
+  align-self: center;
+  margin-top: 8px;
+}
+
+/* PIE DE PÁGINA — FLEXBOX */
+footer {
+  background: #2c2c2c;
+  color: #aaa;
+  font-size: 13px;
+  padding: 22px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  .contenedor-tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Tablet — ≤ 768px */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 20px;
+    justify-content: center;
+    text-align: center;
+    gap: 5vh;
+  }
+
+  .inicio {
+    flex-direction: column;
+    padding: 40px 24px;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .imagen-inicio {
+    max-width: 320px;
+  }
+
+  .texto-inicio {
+    align-items: center;
+  }
+
+  .boton-rojo-arriba {
+    align-self: center;
+  }
+
+  .quien-soy {
+    padding: 50px 24px;
+  }
+
+  .proyectos {
+    padding: 50px 24px;
+  }
+
+  .contenedor-tarjetas {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .tarjeta img {
+    height: 60vh;
+  }
+
+  footer {
+    justify-content: center;
+    text-align: center;
+    padding: 18px 24px;
+  }
+}
+
+/* Móvil — ≤ 480px */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 4px;
+  }
+
+  .enlaces-nav {
+    justify-content: center;
+    gap: 8px 16px;
+  }
+
+  .inicio {
+    padding: 32px 16px;
+    gap: 24px;
+  }
+
+  .imagen-inicio {
+    max-width: 260px;
+  }
+
+  .quien-soy {
+    padding: 40px 16px;
+  }
+
+  .proyectos {
+    padding: 40px 16px;
+  }
+
+  .contenedor-tarjetas {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tarjeta img {
+    height: 60vh;
+  }
+
+  footer {
+    padding: 16px;
+  }
+}
