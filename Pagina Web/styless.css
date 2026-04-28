@@ -248,6 +248,11 @@ footer {
 }
 
 /* MEDIA QUERIES */
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .contenedor-tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media (min-width: 769px) and (max-width: 1000px) {
   .contenedor-tarjetas {
