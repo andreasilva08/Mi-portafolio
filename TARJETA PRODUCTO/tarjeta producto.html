@@ -3,13 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>GAFAS VR</title>
+    <title>GAFAS VR - GRANDE</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
-            /* hace que el borde y relleno NO agranden el tamaño del elemento */
             box-sizing: border-box;
         }
 
@@ -17,28 +16,24 @@
             background: #080818;
             min-height: 100vh;
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px;
             font-family: "Trebuchet MS", "Century Gothic", sans-serif;
         }
 
         .tarjeta {
-            width: 270px;
+            width: 380px; 
             background: linear-gradient(160deg, #141432 0%, #2a1050 45%, #141432 100%);
-            border-radius: 24px;
+            border-radius: 32px; 
             overflow: hidden;
             margin: 0 auto;
             box-shadow:
-                0 30px 60px rgba(0, 0, 0, 0.8),
-                /* sombra grande exterior */
+                0 40px 80px rgba(0, 0, 0, 0.85),
                 0 0 0 1px rgba(255, 255, 255, 0.06),
-                /* borde blanco fantasma */
                 inset 0 1px 0 rgba(255, 255, 255, 0.08);
-            /* "inset" = sombra DENTRO del elemento, simula brillo interior arriba */
         }
 
         .imagen {
-            padding: 0 0 16px 0;
-            /* radial-gradient = degradado en forma de ELIPSE desde un punto central hacia afuera */
+            padding: 0 0 70px 0;
             background: radial-gradient(ellipse 130% 90% at 55% 65%,
                     rgba(210, 60, 255, 0.28) 0%,
                     rgba(140, 40, 200, 0.12) 45%,
@@ -52,76 +47,75 @@
             color: #fff;
             font-family: "Century Gothic", "Futura", monospace;
             font-weight: 900;
-            font-size: 13px;
-            padding: 8px 18px;
-            /* border-radius con 4 valores = top-left, top-right, bottom-right, bottom-left
-         solo redondea la esquina inferior izquierda */
-            border-radius: 0 0 0 18px;
-            /* letter-spacing = espacio entre cada letra */
+            font-size: 18px; 
+            padding: 12px 24px; 
+            border-radius: 0 0 0 24px;
             letter-spacing: 1px;
             box-shadow: -4px 4px 20px rgba(180, 60, 255, 0.6);
         }
 
         .gafas {
-            width: 200px;
-            height: 150px;
+            width: 280px; 
+            height: 210px; 
             object-fit: cover;
             filter:
-                drop-shadow(0 0 18px rgb(69, 42, 73)) drop-shadow(0 0 40px rgba(180, 40, 255, 0.7)) drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
-            padding-top: 10px;
+                drop-shadow(0 0 18px rgb(69, 42, 73)) 
+                drop-shadow(0 0 40px rgba(180, 40, 255, 0.7)) 
+                drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
+            padding-top: 15px;
             text-align: center;
+            margin: 0 auto;
         }
 
         .info {
-            padding: 14px 16px 8px;
+            padding: 20px 24px 14px; 
             border-top: 1px solid rgba(180, 80, 255, 0.25);
             overflow: hidden;
         }
 
         .col-izq {
             float: left;
-            width: 44%;
+            width: 46%; 
             text-align: left;
         }
 
         .nombre-pro {
             font-family: "Century Gothic", "Futura", monospace;
-            font-size: 13px;
+            font-size: 18px; 
             font-weight: 900;
             color: #f0eaff;
             text-transform: uppercase;
             line-height: 1.3;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             letter-spacing: 0.5px;
         }
 
         .prodct-descrp {
-            font-size: 8.5px;
+            font-size: 12px; 
             color: rgba(210, 195, 235, 0.65);
             line-height: 1.55;
-            margin-bottom: 10px;
+            margin-bottom: 14px;
         }
 
         .estrellas {
-            font-size: 14px;
+            font-size: 18px; 
             color: #fbbf24;
             letter-spacing: 2px;
         }
 
         .col-der {
             float: right;
-            width: 53%;
+            width: 50%;
             text-align: left;
         }
 
-        /* CARACTERÍSTICAS */
+        
         .fila-carct {
-            padding-bottom: 8px;
-            margin-bottom: 8px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.07);
         }
 
-        /* Esta clase se pone solo en la última fila para quitarle el borde de abajo */
         .ultima-carct {
             border-bottom: none;
             margin-bottom: 0;
@@ -130,42 +124,39 @@
 
         .titl-carct {
             font-family: "Century Gothic", "Futura", monospace;
-            font-size: 7.5px;
+            font-size: 11px; 
             font-weight: 700;
             color: #c084fc;
             text-transform: uppercase;
             letter-spacing: 1.2px;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
 
         .text-carct {
-            font-size: 8px;
+            font-size: 11px; 
             color: rgba(200, 185, 225, 0.6);
             line-height: 1.45;
         }
 
-        /* BOTÓN */
+        
         .btn {
             clear: both;
-            padding: 14px 16px 18px;
-            text-align: center;
+            padding: 16px 24px 28px;
         }
 
         .btn-tarjt {
             background: transparent;
             color: #d8b4fe;
-            border: 1.5px solid rgba(168, 85, 247, 0.55);
+            border: 2px solid rgba(168, 85, 247, 0.55); 
             border-radius: 50px;
-            padding: 10px 32px;
+            padding: 14px 40px; 
             font-family: "Century Gothic", "Futura", monospace;
-            font-size: 9px;
+            font-size: 12px; 
             font-weight: 700;
             letter-spacing: 2.5px;
             text-transform: uppercase;
             cursor: pointer;
             box-shadow: 0 0 18px rgba(168, 85, 247, 0.25);
-            /* transition = anima suavemente los cambios de esas propiedades al hacer hover
-         el número (0.3s) es cuánto dura la animación */
             transition: box-shadow 0.3s, border-color 0.3s, color 0.3s;
         }
 
@@ -181,7 +172,6 @@
 
     <div class="tarjeta">
 
-        <!-- IMAGEN + PRECIO -->
         <div class="imagen">
             <span class="precio">$349</span>
             <div class="gafas">
@@ -189,17 +179,14 @@
             </div>
         </div>
 
-        <!-- INFO: dos columnas con float -->
         <div class="info">
 
-            <!-- Columna izquierda -->
             <div class="col-izq">
                 <h2 class="nombre-pro">Nova<br>Vision X</h2>
                 <p class="prodct-descrp">Sumérgete en otra realidad con total libertad de movimiento.</p>
                 <div class="estrellas">★★★★☆</div>
             </div>
 
-            <!-- Columna derecha -->
             <div class="col-der">
                 <div class="fila-carct">
                     <div class="titl-carct">Resolución</div>
@@ -209,7 +196,6 @@
                     <div class="titl-carct">Batería</div>
                     <div class="text-carct">Hasta 3 horas de uso continuo.</div>
                 </div>
-                <!-- ultima-carct quita el borde inferior de la última fila -->
                 <div class="fila-carct ultima-carct">
                     <div class="titl-carct">Peso</div>
                     <div class="text-carct">295g, diseño ligero y ergonómico.</div>
@@ -218,7 +204,6 @@
 
         </div>
 
-        <!-- BOTÓN (btn-efct activa el hover) -->
         <div class="btn">
             <button class="btn-tarjt btn-efct">Añadir al carrito</button>
         </div>
