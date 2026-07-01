@@ -279,8 +279,9 @@ h4,
   align-items: center;
   padding-top: 100px;
   background:
-    linear-gradient(rgba(13, 13, 13, 0.6), rgba(13, 13, 13, 0.92)),
-    url('https://drive.google.com/file/d/1KT8dXO5cQoG1TtPPYCqf938O8dpw6s8z/view?usp=drive_link') center 5% / cover no-repeat;
+  linear-gradient(rgba(13,13,13,.6), rgba(13,13,13,.92)),
+  url("https://lh3.googleusercontent.com/d/1KT8dXO5cQoG1TtPPYCqf938O8dpw6s8z")
+  center 5% / cover no-repeat;
   overflow: hidden;
 }
 
@@ -539,39 +540,39 @@ h4,
 }
 
 .tarjeta-imagen-1 {
-  background-image: url('./imagen/3.png');
+  background-image: url('https://lh3.googleusercontent.com/d/10gqwOOLU1CMnTveYSy4isxlnvnlkGaAq');
 }
 
 .tarjeta-imagen-2 {
-  background-image: url('./imagen/4.png');
+  background-image: url('https://lh3.googleusercontent.com/d/1GFygNNKp1wC_IZ5HBh5XxtPUgl-tNH1T');
 }
 
 .tarjeta-imagen-3 {
-  background-image: url('./imagen/5.png');
+  background-image: url('https://lh3.googleusercontent.com/d/1y20OUBEhI-PhdSSelTvKiuDVN2U5AXiU');
 }
 
 .tarjeta-imagen-4 {
-  background-image: url('./imagen/6.png');
+  background-image: url('https://lh3.googleusercontent.com/d/1AfBPuLCBhOPdbw6NLbXIQlv6y8bUB-v0');
 }
 
 .tarjeta-imagen-5 {
-  background-image: url('./imagen/7.png');
+  background-image: url('https://lh3.googleusercontent.com/d/1i0zIuVawfmL15dIMAdlQtn53mCKAaSXx');
 }
 
 .tarjeta-imagen-6 {
-  background-image: url('./imagen/8.png');
+  background-image: url('https://lh3.googleusercontent.com/d/14SV-xZXZmiVoeKQs18BjNI0REAxZONVa');
 }
 
 .tarjeta-imagen-7 {
-  background-image: url('./imagen/9.png');
+  background-image: url('https://lh3.googleusercontent.com/d/1tHySrjy4XZfnfk750iEXAeOE6QEkNk4q');
 }
 
 .tarjeta-imagen-8 {
-  background-image: url('./imagen/10.png');
+  background-image: url('https://lh3.googleusercontent.com/d/1oH-dJDYHc3JTZo58XAtiPgl5Cvpd7ald');
 }
 
 .tarjeta-imagen-9 {
-  background-image: url('./imagen/11.png');
+  background-image: url('https://lh3.googleusercontent.com/d/1NjewCKcvhXlHSPpd6KxfsxGywx5wPwaW');
 }
 
 .tarjeta-cuerpo {
@@ -756,31 +757,30 @@ video {
 }
 
 .item-galeria-1:first-child {
-grid-column: span 3;
+  grid-column: span 3;
   aspect-ratio: auto;
-  background-image: url('./imagen/g1.png');
+  background-image: url('https://lh3.googleusercontent.com/d/1aGMdoaRx6xNMlx0ebkmZAIVbwDLI7zIU');
 }
 
 .item-galeria-2 {
-  background-image: url('./imagen/g2.png');
+  background-image: url('https://lh3.googleusercontent.com/d/1PsJRr9R1xbTieGz14UOV0SwX_zQ7Muzg');
 }
 
 .item-galeria-3 {
-  background-image: url('./imagen/g3.png');
+  background-image: url('https://lh3.googleusercontent.com/d/16_CfkYtClKbGLQxsox4CZqijWnshoJyj');
 }
-
 .item-galeria-4 {
-  background-image: url('./imagen/g4.png');
+  background-image: url('https://lh3.googleusercontent.com/d/1rxKkDG-cw0co7fiUQTdUIQDxKUW88aO3');
 }
 
 .item-galeria-5 {
-  background-image: url('./imagen/g5.png');
+  background-image: url('https://lh3.googleusercontent.com/d/18T3cEGqwrLvtN11doYykynwiELck2xQp');
 }
 
 .item-galeria-6 {
   grid-column: span 2;
   aspect-ratio: auto;
-  background-image: url('./imagen/g6.png');
+  background-image: url('https://lh3.googleusercontent.com/d/1OtVSD6bX4xDpGkkXjK3DfGJ80-7JEr4r');
 }
 
 /*  EQUIPO  */
@@ -831,15 +831,15 @@ grid-column: span 3;
 }
 
 .foto-1 {
-  background-image: url('./imagen/Mono.png');
+  background-image: url("https://drive.google.com/thumbnail?id=1-T_kTnjI98uKm8lUjzE-FciOhMvMu3G1&sz=w1200");
 }
 
 .foto-2 {
-  background-image: url('./imagen/kevin.png');
+  background-image: url("https://drive.google.com/thumbnail?id=1Ol0YrGLRkoLgbC2NDvR_Q7BQHITNX42B&sz=w1200");
 }
 
 .foto-3 {
-  background-image: url('./imagen/Sebastian.png');
+  background-image: url("https://drive.google.com/thumbnail?id=1KqCUlLC6lN9iYe3Kx1xA-vF6dV_van-4&sz=w1200");
 }
 
 .tarjeta-barbero h3 {
